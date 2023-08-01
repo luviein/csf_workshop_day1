@@ -1,0 +1,24 @@
+<h2>Selected Cart Items</h2>
+<br><br>
+<div class="container">
+  <div class="row">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <td>Item</td>
+          <td>Quantity</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{item.name}}</td>
+          <td>{{item.quantity}}</td>
+          <td>
+            <button class="btn btn-primary"  (click)="deleteItem(item.name)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+<div class="container">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Item Name</th>
+        <th>Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems ; let i = index">
+        <td><img src="{{item.image}}" height="150px" width="auto"></td>
+        <td>{{item.itemName}}</td>
+        <td><button class="btn btn-primary" (click) = "onSelectItem(item.itemName)">Add</button></td>
+
+
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
